@@ -33,3 +33,18 @@ body {
     animation-timing-function: ease-out;
   }
 }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
