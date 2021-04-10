@@ -2,8 +2,7 @@
   max-width: $grid-width;
   margin: 0 auto;
   // color: rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
-  text-align: center;
+  // background-color: rgb(255, 255, 255);
 
   &:not(:last-child) {
     margin-bottom: $gutter-horizontal;
