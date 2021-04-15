@@ -1,6 +1,8 @@
 .btn {
+  &,
   &:link,
   &:visited {
+    //a tag
     text-decoration: none;
     text-transform: uppercase;
     padding: 1.5rem 4rem;
@@ -9,6 +11,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $font-size;
+
+    //actual btn tag
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,7 +27,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     transform: translate(1px);
     box-shadow: 0 5px 1rem rgba($color-black, 0.3);
   }
