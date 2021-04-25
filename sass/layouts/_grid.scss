@@ -6,6 +6,15 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-horizontal;
+
+    @include respond(tabPortrait) {
+      margin-bottom: $gutter-horizontal-small;
+    }
+  }
+
+  @include respond(tabPortrait) {
+    max-width: 50%;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -17,6 +26,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-vertical;
+
+      @include respond(tabPortrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-horizontal-small;
+      }
+    }
+
+    @include respond(tabPortrait) {
+      width: 100% !important;
     }
   }
 
