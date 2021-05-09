@@ -22,11 +22,19 @@
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s 0.2s;
+
+    @include respond(phone) {
+      width: 95%;
+    }
   }
 
   &__left {
     width: 33.3333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      width: 48%;
+    }
   }
 
   &__right {
@@ -34,6 +42,10 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem;
+
+    @include respond(phone) {
+      width: 62%;
+    }
   }
 
   &__img {
@@ -62,6 +74,11 @@
       text-decoration: none;
       display: inline-block;
       transition: all 0.3s;
+
+      @include respond(phone) {
+        top: 0.5rem;
+        right: 1.5rem;
+      }
     }
 
     &:hover {
