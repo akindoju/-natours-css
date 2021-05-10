@@ -81,6 +81,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
   .heading-primary--main {
@@ -111,11 +112,14 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3.5rem;
+  color: #28b485;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
-  display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; }
+  display: inline-block; }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .heading-secondary {
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; } }
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -292,9 +296,12 @@ body {
     margin-bottom: 1rem;
     background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
     display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
+    color: #7ed56f; }
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      .feature-box__icon {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; } }
     @media (max-width: 56.25em) {
       .feature-box__icon {
         margin: 0; } }
@@ -336,10 +343,12 @@ body {
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     border-top-right-radius: 4px;
     border-top-left-radius: 4px; }
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      .card__picture {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); } }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
     .card__picture--2 {

@@ -19,9 +19,13 @@
       $color-primary-dark
     );
     display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: $color-primary-light;
+
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
     @include respond(tabPortrait) {
       margin: 0;
