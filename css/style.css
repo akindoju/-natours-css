@@ -129,12 +129,21 @@ body {
       font-size: 3rem; } }
   @media only screen and (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem;
+      padding: 0 1rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+
+.heading-tertiary--phone {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary--phone {
+      margin-top: 18rem; } }
 
 .paragraph {
   font-size: 1.4rem; }
@@ -453,7 +462,8 @@ body {
       padding-left: 8rem; } }
   @media only screen and (max-width: 37.5em) {
     .story {
-      transform: skewX(0); } }
+      transform: skewX(0);
+      padding: 3rem; } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -471,12 +481,16 @@ body {
         border-radius: none; } }
     @media only screen and (max-width: 37.5em) {
       .story__shape {
-        transform: translateX(-3rem) skewX(0); } }
+        transform: skewX(0);
+        margin-left: 3rem; } }
   .story__image {
     transform: translateX(-4rem) scale(1.4);
     height: 100%;
     transition: all 0.5s;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .story__image {
+        transform: translateX(0rem) scale(1); } }
   .story__text {
     transform: skewX(12deg); }
     @media only screen and (max-width: 37.5em) {
@@ -790,8 +804,9 @@ body {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+      height: 75vh; } }
   .header__logo-box {
     position: absolute;
     top: 2.8rem;
@@ -799,6 +814,10 @@ body {
     animation-name: moveInDown;
     animation-timing-function: ease-out;
     animation-duration: 1s; }
+    @media only screen and (max-width: 37.5em) {
+      .header__logo-box {
+        top: 3.7rem;
+        left: 3.7rem; } }
   .header__logo {
     height: 3.5rem; }
   .header__text-box {
@@ -818,8 +837,12 @@ body {
         margin-bottom: 4rem; } }
   @media only screen and (max-width: 56.25em) {
     .row {
-      max-width: 50%;
+      max-width: 80%;
       padding: 0 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .row {
+      max-width: 60%;
+      padding: 0; } }
   .row::after {
     display: table;
     content: '';
